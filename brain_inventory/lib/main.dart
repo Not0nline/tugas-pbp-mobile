@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:brain_inventory/menu.dart';
+import 'package:brain_inventory/screens/menu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,5 +36,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
