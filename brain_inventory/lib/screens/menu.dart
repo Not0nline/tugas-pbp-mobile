@@ -5,61 +5,6 @@ import 'package:brain_inventory/widgets/brain_card.dart';
 import 'package:brain_inventory/screens/brainlist_form.dart';
 // import 'package:brain_inventory/screens/showbrain_function.dart';
 
-class ShopCard extends StatelessWidget {
-  final ShopItem item;
-
-  const ShopCard(this.item, {super.key}); // Constructor
-
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      color: item.colour,
-      child: InkWell(
-        // Area responsive terhadap sentuhan
-        onTap: () {
-          // Memunculkan SnackBar ketika diklik
-          ScaffoldMessenger.of(context)
-            ..hideCurrentSnackBar()
-            ..showSnackBar(SnackBar(
-                content: Text("Kamu telah menekan tombol ${item.name}!")));
-          if (item.name == "Tambah Brain Functionality") {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const ShopFormPage()));
-          }
-          if (item.name == "Lihat Brain Function") {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const BrainFunctionListPage()));
-          }
-        },
-        child: Container(
-          // Container untuk menyimpan Icon dan Text
-          padding: const EdgeInsets.all(8),
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  item.icon,
-                  color: Colors.white,
-                  size: 30.0,
-                ),
-                const Padding(padding: EdgeInsets.all(3)),
-                Text(
-                  item.name,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.white),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key}) : super(key: key);
 

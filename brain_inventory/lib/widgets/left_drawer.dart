@@ -1,3 +1,4 @@
+import 'package:brain_inventory/screens/showbrain_function.dart';
 import 'package:flutter/material.dart';
 import 'package:brain_inventory/screens/menu.dart';
 import 'package:brain_inventory/screens/brainlist_form.dart';
@@ -59,6 +60,18 @@ class LeftDrawer extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const ShopFormPage()));
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.shopping_basket),
+            title: const Text('Daftar Produk'),
+            onTap: () {
+              // Route menu ke halaman produk
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const BrainFunctionListPage()),
+              );
             },
           ),
         ],

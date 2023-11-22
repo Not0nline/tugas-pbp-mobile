@@ -85,3 +85,39 @@ Application Layer: Lapisan ini mengimplementasikan use case dari aplikasi dan me
 - mengedit fungsi, dan routing data sehingga akan menuju fungsi itu ketika nama card yang dipencet sama dengan nama yang kita expect
 - membaut kelas-kelas pada screens agar tampilannya bagus
 - masukan kelas ke dalam folder agar lebih rapih
+
+III. Tugas 9
+
+1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+- Bisa, kita bisa melakukan pengambilan data JSON tanpa membuat model terlebih dahulu. Metode ini biasanya digunakan untuk mengambil data dalam format JSON. Namun, membuat model sebelum melakukan pengambilan data JSON dapat membantu dalam memahami struktur data dan mempermudah proses manipulasi data.
+
+2. Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+- cookies digunakan untuk menyimpan informasi pengguna, seperti preferensi pengaturan, informasi login, dan konten yang dipersonalisasi. Dalam aplikasi Flutter, konsep serupa mungkin digunakan untuk membagikan informasi pengguna ke semua komponen aplikasi.
+
+3. Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+- Membuat HTTP request untuk mendapatkan data JSON.
+- Menguraikan data JSON menggunakan jsonDecode.
+- Mengubah data yang telah diuraikan menjadi objek Dart menggunakan model yang telah dibuat.
+- Menampilkan data tersebut dalam widget Flutter.
+
+4. Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+- Pengguna memasukkan data akun (misalnya, username dan password) dalam form di Flutter.
+- Data ini dikirim ke server Django melalui HTTP request.
+- Django memverifikasi data ini. Jika data valid, Django mengirimkan respons sukses.
+- Flutter menerima respons dan, jika sukses, menampilkan menu atau konten lainnya.
+
+5. Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
+- Text: Digunakan untuk menampilkan teks pada layar.
+- Image: Digunakan untuk menampilkan gambar.
+- Container: Digunakan untuk mengatur tampilan dan perilaku dari widget lain.
+- AppBar: Digunakan untuk membuat AppBar.
+- Scaffold: Digunakan untuk struktur dasar material design.
+- Center: Digunakan untuk membuat widget ke tengah.
+- Row dan Column: Digunakan untuk layout.
+
+6. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
+- membuat app baru di django bernaka authenticate
+- mengubah settings di django agar dapat mengambil data dari django
+- menginstall dependensi baru di flutter
+- masukan agar semua fungsi sekarang menggunakan cookie untuk login, logout
+- mengubah agar data diambil dari django (dari ambil dari databse sendiri)
