@@ -26,7 +26,7 @@ class _BrainFunctionListPage extends State<BrainFunctionListPage> {
     final request = context.watch<CookieRequest>();
     Future<List<Product>> response = request
         .postJson("http://127.0.0.1:8000/json/",
-            jsonEncode(<String, dynamic>{"Content-Type": "application/json"}))
+            jsonEncode(<String, String>{"Content-Type": "application/json"}))
         .then((value) {
       if (value == null) {
         return [];
